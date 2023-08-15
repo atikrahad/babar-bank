@@ -27,6 +27,11 @@ document.getElementById('btn3').addEventListener('click', function(){
     }else{
         const userAmount = document.getElementById('withdrowAmoutn');
     const dpAm = userAmount.value;
+        const updateTotalb = document.getElementById('totalB');
+    let updateTotal = updateTotalb.innerText;
+        if(parseFloat(dpAm)<= parseFloat(updateTotal)){
+            const userAmount = document.getElementById('withdrowAmoutn');
+    const dpAm = userAmount.value;
     console.log(dpAm);
     const updateDp = document.getElementById('withAm');
     let updateDpam = updateDp.innerText;
@@ -40,6 +45,10 @@ document.getElementById('btn3').addEventListener('click', function(){
     updateTotalb.innerText = updateTotal;
 
     userAmount.value = "";
+        }else{
+            alert('You have not much amount')
+        }
+        
     }
 
     
